@@ -2,6 +2,9 @@
 
 #define bool short
 
+#define PRINT_OCT(x) printf("oval[%s] = %o", #x, x)
+#define PRINT_HEX(x) printf("xval[%s] = %x", #x, x)
+
 bool isPOT(int x) {
     while (x%2 == 0) {
         x /= 2;
@@ -50,5 +53,9 @@ int main() {
     printf("\n");
     printf("%d %d", log2of(9), log2of(16));
     printf("\nHello, World!\n");
+
+    PRINT_HEX(31);
+    printf("\n");
+    PRINT_OCT(31);
     return 0;
 }
